@@ -25,7 +25,7 @@ window.onscroll = () =>
             navLinks.forEach(links =>
                 {
                     links.classList.remove('active');
-                    document.querySelector('header nav a[href*=' + id +']').classList.add('active');
+                    document.querySelector('header navbar a[href*=' + id +']').classList.add('active');
                 })
         }
     });
@@ -45,13 +45,13 @@ ScrollReveal
 });
 
 ScrollReveal().reveal('.home-content, .cabeza', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .estudios-container, .contacto form', { origin: 'bottom' });
+// ScrollReveal().reveal('.home-img, .estudios-container, .contacto form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .perfil-img', { origin: 'left' });
 ScrollReveal().reveal('.perfil-content', { origin: 'right' });
 
 const typed = new Typed('.multiple-text',
 {
-    strings:['Desarrollo de Videojuegos', 'Diseño Gráfico', 'Desarrollo Web'],
+    strings:[ 'Desarrollo Web', 'Diseño UX/UI','Desarrollo de Videojuegos', 'Diseño Gráfico'],
     typeSpeed: 100,
     backSpeed: 100,
     backSpeed: 100,
