@@ -58,4 +58,18 @@ const typed = new Typed('.multiple-text',
     loop: true
 });
 
+const openModal = documents.querySelector('.btn-modal');
+const modal = documents.querySelector('.modal');
+const closeModal = documents.querySelector('.modal-close');
 
+openModal.addEventListener('click', (e) =>
+{
+    e.preventDefault();
+    modal.classList.add('modal--show');
+});
+
+closeModal.addEventListener('click', (e) =>
+{
+    e.preventDefault();
+    modal.classList.remove('modal--show');
+});

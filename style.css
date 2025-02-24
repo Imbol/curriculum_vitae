@@ -29,7 +29,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 10rem 9% 2rem;
   padding-left: 50vh;
 }
@@ -221,8 +221,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  background: var(--second-bg-color);
+  gap: 2rem;  
 }
 
 .perfil-img img {
@@ -264,10 +263,12 @@ span {
 .estudios-container .estudios-box {
   flex: 1 1 20rem;
   background: var(--second-bg-color);
-  padding: 3rem 2rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 2rem;
   text-align: center;
   border: 0.2rem solid var(--bg-color);
+  min-width: 20vw;
+  max-height: 30vh;
   transition: 0.5s ease;
 }
 
@@ -286,6 +287,44 @@ span {
 }
 
 .estudios-box p {
+  font-size: 2rem;
+  margin: 1rem 0 3rem;
+}
+
+.experiencia-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: 2rem;
+  gap: 2rem;
+  margin-bottom: 1%;
+}
+
+.experiencia-container .experiencia-box {
+  flex: 1 1 20rem;
+  background: var(--second-bg-color);
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);  
+  transition: 0.5s ease;
+}
+
+.experiencia-container .experiencia-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.experiencia-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.experiencia-box h3 {
+  font-size: 2.6rem;
+}
+
+.experiencia-box p {
   font-size: 2rem;
   margin: 1rem 0 3rem;
 }
@@ -399,6 +438,37 @@ span {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
+.modal {
+  position: fixed;
+  Top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.modal-container {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: var(--second-bg-color);
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+}
+
 .contacto h2 {
   margin-bottom: 3rem;
 }
@@ -446,8 +516,15 @@ span {
   justify-content: center;
   margin-bottom: 2%;
 }
+
 .contact-list li {
-  font-size: 2rem;
+  font-size: 2rem; 
+  display: flex;
+  align-items: center;
+}
+
+.contact-list li i {
+  padding-right: 8px;
 }
 
 @media (max-width: 1200px) {
