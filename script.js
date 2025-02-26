@@ -58,18 +58,19 @@ const typed = new Typed('.multiple-text',
     loop: true
 });
 
-const openModal = documents.querySelector('.btn-modal');
-const modal = documents.querySelector('.modal');
-const closeModal = documents.querySelector('.modal-close');
+const hideInfo_btn = document.querySelectorAll('.portafolio-btn');
+const hideInfo = document.querySelectorAll('.hide');
 
-openModal.addEventListener('click', (e) =>
-{
-    e.preventDefault();
-    modal.classList.add('modal--show');
-});
+hideInfo_btn.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const textElement = hideInfo[index];
+    
+    textElement.classList.toggle('show');
 
-closeModal.addEventListener('click', (e) =>
-{
-    e.preventDefault();
-    modal.classList.remove('modal--show');
+    if (textElement.classList.contains('show')) {
+        button.textContent = 'CERRAR';  
+      } else {
+        button.textContent = 'VER';  
+      }
+  });
 });
