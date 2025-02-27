@@ -58,14 +58,19 @@ const typed = new Typed('.multiple-text',
     loop: true
 });
 
-const hideInfo_btn = document.querySelectorAll('.portafolio-btn');
+const hideInfoBtn = document.querySelectorAll('.portafolio-btn');
 const hideInfo = document.querySelectorAll('.hide');
+portafolioImg = document.querySelectorAll('.portafolio-img');
 
-hideInfo_btn.forEach((button, index) => {
+hideInfoBtn.forEach((button, index) => {
   button.addEventListener('click', () => {
     const textElement = hideInfo[index];
+    imgElement = portafolioImg[index];
+    const cardElement = button.closest('.portafolio-box');
     
     textElement.classList.toggle('show');
+    imgElement.classList.toggle('hide');
+    cardElement.classList.toggle('expanded');
 
     if (textElement.classList.contains('show')) {
         button.textContent = 'CERRAR';  
